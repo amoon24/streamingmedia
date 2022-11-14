@@ -1,0 +1,277 @@
+html{
+    font-family: Optima;
+    background-color: #020659;
+}
+
+body{
+    background-color: #ffffff;
+    min-width: 345px;
+    max-width: 875px;
+    margin: 0 auto;
+}
+header{
+    background-color: #020659;
+}
+h1{
+    font-size: 20pt;
+    color: #ffffff;
+    font-variant: small-caps;
+    text-decoration: none;
+}
+#smoothjazz {
+    background-image: linear-gradient(to right, #030a8c,#020873,#111111);
+    color: #ffffff;
+    padding: 10px;
+}
+nav ul{
+    position: absolute;
+    
+    background-color: #020873;
+   
+}
+nav a{
+    text-decoration: none;
+    color: #ffffff;
+}
+nav a:hover {
+    color: #590242;
+   
+}
+nav li{
+    text-decoration: none;
+    display: flex;
+    list-style: none;
+}
+ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+h3{
+    font-size: 20pt;
+    color: #590242;
+    margin-left:15px;
+}
+#trending{
+    display:flex;
+    overflow:auto;
+}
+#trending figure{
+    position: relative;
+ 
+}
+#trending figcaption{
+    position: relative;
+    top:325px;
+    width: 100%;
+    background-color: grey;
+    color: #590242;
+}
+#trending audio{
+    position: absolute;
+    left: 5px;
+    top: 225px;
+}
+audio[webkit-media-controls-mute-button]{
+    background-color: #ffffff;
+}
+audio[webkit-media-controls-play-button]{
+    background-color: #ffffff;
+}
+audio[webkit-media-controls-enclosure]{
+    background-color: #590242;
+}
+#trending p{
+    margin-left: 10px;
+    height: 15px;
+
+}
+#trendingp:first-child{
+    color: #590242;
+
+}
+#trending[webkit-scrollbar]{
+    width:100px;
+}
+#trending[webkit-scrollbar-track]{
+    background-color: #020873;
+}
+#trending[webkit-scrollbar-thumb]{
+    background-color: #590242;
+    width: 100px;
+}
+#trending[webkit-scrollbar-thumb]{
+    background:#020659;
+}
+button{
+    background-color: #590242;
+    color: #ffffff;
+}
+button:hover{
+    background-color: #020873;
+}
+label span, input {
+        display: none;
+    }
+
+#playl p{
+    color: #ffffff;
+}
+#playl p:first-child{
+    color: #ffffff;
+}
+#playl{
+    background-color: #6065dd;
+    display: flex;
+    overflow: auto;
+}
+#playl figure{
+    background-color: cornflowerblue;
+}
+#playl figcaption{
+    width: 100%;
+    text-align: center;
+}
+
+#playl[webkit-scrollbar]{
+    width: 100%;
+}
+#playl[webkit-scrollbar-track] {
+    background-color: #020873;
+}
+#playl[webkit-scrollbar-thumb] {
+    background-color: #590242;
+    width: 100%;
+}
+#playl[webkit-scrollbar-thumb] {
+    background-color: #020659;
+}
+#curated{
+    background-color: #ffffff;
+    margin-top: -50px;
+    margin-left:625px ;
+}
+#list{
+    background-color: #0c0d22;
+    display: flex;
+    overflow: auto;
+}
+#list figure{
+    background-color: #020873;
+}
+#list figcaption{
+    width: 100%;
+}
+
+#list p{
+    color: #ffffff;
+}
+
+
+footer{
+    font-size: small;
+    color: #590242;
+    text-align: center;
+}
+
+   
+
+@media screen and (min-width:834px) {
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: flex;
+        padding-left: 25px;
+       
+    }
+    nav li{
+        margin-top: 10px;
+        margin-left: 200px;
+        text-align: center;
+        font-size: 12pt;
+    }
+   
+    label span, input {
+        display: none;
+    }
+    #playl{
+        float: left;
+        display:grid;
+        grid-gap: 10px;
+    
+      
+    }
+    #play1 figure{
+        position:absolute;
+       
+       
+    }
+    #playl figcaption{
+       
+        position: relative;
+    }
+    #list{
+        display:grid;
+        grid-gap: 10px;
+       
+       
+        margin-top: -9px;
+    }
+    #list figure{
+        float: left;
+        
+    }
+    #list figcaption{
+        text-align: right;
+    }
+ 
+}
